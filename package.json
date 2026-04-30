@@ -1,0 +1,35 @@
+{
+  "name": "anti-mev-beat-the-house",
+  "version": "1.0.0",
+  "description": "Beat the House demo for public mempool vs Neo X protected transaction flow",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network neox",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "bot": "node bot/frontRunner.js",
+    "frontend": "cd frontend && npm run dev",
+    "generate-wallet": "node scripts/generateWallet.js"
+  },
+  "keywords": [
+    "blockchain",
+    "mev",
+    "front-running",
+    "neo-x",
+    "beat-the-house"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "express": "^4.18.2",
+    "ws": "^8.14.2"
+  }
+}

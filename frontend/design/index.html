@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell mobile-arena-hidden">
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <div class="setting-row">
+            <div>
+              <h3>Debug Mode</h3>
+              <p>Enable to see transactions in mempool</p>
+            </div>
+            <button class="toggle" type="button" aria-label="Toggle debug mode">
+              <span></span>
+            </button>
+          </div>
+
+          <section class="panel-block">
+            <h3>Choose your Move</h3>
+            <div class="move-picker">
+              <button class="move-btn is-active" data-move="rock" type="button">Rock</button>
+              <button class="move-btn" data-move="paper" type="button">Paper</button>
+              <button class="move-btn" data-move="scissors" type="button">Scissors</button>
+            </div>
+          </section>
+
+          <section class="panel-block">
+            <h3>Bet Amount (MEV Tokens)</h3>
+            <div class="bet-row">
+              <input id="betAmountInput" type="number" min="0" value="0" />
+              <span>Minimum: 1 Token</span>
+            </div>
+          </section>
+
+          <div class="setting-row compact">
+            <div>
+              <h3>Anti-MEV Mode</h3>
+              <p>Public mempool · 10x Reward</p>
+            </div>
+            <button class="toggle is-on" type="button" aria-label="Toggle anti-MEV mode">
+              <span></span>
+            </button>
+          </div>
+
+          <section class="winnings">
+            <header>Potential Winnings</header>
+            <strong>
+              <em id="winningsValue">1000.00 MEV</em>
+            </strong>
+          </section>
+
+          <button class="commit-btn" id="commitBtn" type="button">Commit Move</button>
+          <p class="wallet">Nsdhofd...dfoy ↪</p>
+        </div>
+
+        <div class="wallet-gate" id="walletGate">
+          <h2>Connect your wallet to start playing</h2>
+          <button class="wallet-gate-primary" type="button" data-wallet-option>
+            Connect Wallet
+          </button>
+          <p>Or choose a specific wallet:</p>
+          <div class="wallet-gate-grid">
+            <button type="button" data-wallet-option>MetaMask</button>
+            <button type="button" data-wallet-option>Wallet Connect</button>
+            <button type="button" data-wallet-option>Coinbase Wallet</button>
+            <button type="button" data-wallet-option>Injected</button>
+          </div>
+          <div class="wallet-gate-divider"></div>
+          <div class="wallet-gate-info-icon">i</div>
+          <p class="wallet-gate-note">
+            The goal of this game is to beat the bot.<br />
+            This is a game built to explore and<br />
+            better understand MEV.
+          </p>
+        </div>
+      </aside>
+
+      <main class="arena" aria-live="polite">
+        <button class="arena-back-btn" id="arenaBackBtn" type="button" aria-label="Back to controls">
+          ← Back
+        </button>
+        <div class="battlefield">
+          <div class="fighters">
+            <div class="fighter fighter-left">
+              <div class="anim-holder" id="leftAnim"></div>
+            </div>
+            <div class="fighter fighter-right">
+              <div class="anim-holder" id="rightAnim"></div>
+            </div>
+          </div>
+          <div class="result-badge hidden" id="resultBadge"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

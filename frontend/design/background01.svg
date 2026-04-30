@@ -1,0 +1,335 @@
+<svg width="1272" height="1633" viewBox="0 0 1272 1633" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H1271.25V1136.2H0V0Z" fill="#00714F"/>
+<path d="M0.498456 763.328L169.816 674.209H251.508L0.498456 845.02V763.328Z" fill="#005B40"/>
+<rect y="655.795" width="1271.92" height="36.8223" fill="#005B40"/>
+<ellipse cx="639.88" cy="770.94" rx="101.833" ry="25.2349" fill="#006547"/>
+<path d="M377.627 1125.36L646.814 775.766L926.183 1125.36H377.627Z" fill="#006547"/>
+<path d="M1271.92 763.328L1111.93 674.209H1030.24L1271.92 845.02V763.328Z" fill="#005B40"/>
+<path d="M0 1042.23H1271.25V1632.87H0V1042.23Z" fill="#006547"/>
+<path d="M969.366 581.526L1013.95 491.342C1013.95 491.342 781.051 522.357 630.837 521.683C487.782 521.041 266.132 491.342 266.132 491.342L308.691 581.526C308.691 581.526 508.92 588.095 637.261 588.122C766.981 588.15 969.366 581.526 969.366 581.526Z" fill="#003324"/>
+<path d="M217.777 484.746L0.0472842 452.861V561.269C0.0472842 561.269 126.778 569.113 160.384 572.299C193.779 575.466 246.119 577.566 246.119 577.566L217.777 484.746Z" fill="#003324"/>
+<path d="M1061.8 484.746L1271.58 452.861V561.269C1271.58 561.269 1152.8 569.113 1119.2 572.299C1085.8 575.466 1033.46 577.566 1033.46 577.566L1061.8 484.746Z" fill="#003324"/>
+<g id="DotsLayer" transform="translate(95 465)">
+<circle cx="989.052" cy="107.877" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.93; -1.17 0.93; 0 0" dur="0.91s" begin="-0.06s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 100.669 97.9844)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.11; -1.39 1.11; 0 0" dur="0.98s" begin="-0.12s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="1008.84" cy="106.471" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.29; -1.61 1.29; 0 0" dur="1.05s" begin="-0.18s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 80.8818 96.5781)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.75; -1.83 0.75; 0 0" dur="1.12s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="944.667" cy="67.8926" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.93; -0.95 0.93; 0 0" dur="1.19s" begin="-0.30s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 141.646 58)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.11; -1.17 1.11; 0 0" dur="1.26s" begin="-0.36s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="954.559" cy="39.0801" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.29; -1.39 1.29; 0 0" dur="0.84s" begin="-0.42s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 131.755 29.1875)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.75; -1.61 0.75; 0 0" dur="0.91s" begin="-0.48s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 983.614 29.1852)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.93; -1.83 0.93; 0 0" dur="0.98s" begin="-0.54s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 974.539 57.9996)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.11; -0.95 1.11; 0 0" dur="1.05s" begin="-0.60s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1012.15 72.6808)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.29; -1.17 1.29; 0 0" dur="1.12s" begin="-0.66s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1043.14 92.4673)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.75; -1.39 0.75; 0 0" dur="1.19s" begin="-0.72s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1081.74 19.293)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.93; -1.61 0.93; 0 0" dur="1.26s" begin="-0.78s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1077.51 88.0928)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.11; -1.83 1.11; 0 0" dur="0.84s" begin="-0.84s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 954.753 93.2864)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.29; -0.95 1.29; 0 0" dur="0.91s" begin="-0.90s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 977.778 92.4673)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.75; -1.17 0.75; 0 0" dur="0.98s" begin="-0.96s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1008.36 44.8329)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.93; -1.39 0.93; 0 0" dur="1.05s" begin="0.00s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1028.14 25.0484)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="1.12s" begin="-0.06s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1049.73 22.5302)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.29; -1.83 1.29; 0 0" dur="1.19s" begin="-0.12s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1038.03 52.5369)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.75; -0.95 0.75; 0 0" dur="1.26s" begin="-0.18s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1071.85 52.5369)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.93; -1.17 0.93; 0 0" dur="0.84s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="108.023" cy="39.0778" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.11; -1.39 1.11; 0 0" dur="0.91s" begin="-0.30s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="117.099" cy="67.8922" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.29; -1.61 1.29; 0 0" dur="0.98s" begin="-0.36s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="79.4861" cy="82.5734" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.75; -1.83 0.75; 0 0" dur="1.05s" begin="-0.42s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="48.4991" cy="102.36" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.93; -0.95 0.93; 0 0" dur="1.12s" begin="-0.48s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="29.1855" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.11; -1.17 1.11; 0 0" dur="1.19s" begin="-0.54s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="14.1257" cy="97.9854" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.29; -1.39 1.29; 0 0" dur="1.26s" begin="-0.60s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="136.885" cy="103.179" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.75; -1.61 0.75; 0 0" dur="0.84s" begin="-0.66s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="113.859" cy="102.36" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.93; -1.83 0.93; 0 0" dur="0.91s" begin="-0.72s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="83.2811" cy="54.7254" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.11; -0.95 1.11; 0 0" dur="0.98s" begin="-0.78s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="63.4966" cy="34.941" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.29; -1.17 1.29; 0 0" dur="1.05s" begin="-0.84s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="41.9107" cy="32.4227" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.75; -1.39 0.75; 0 0" dur="1.12s" begin="-0.90s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="53.6044" cy="62.4295" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.93; -1.61 0.93; 0 0" dur="1.19s" begin="-0.96s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="19.7849" cy="62.4295" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.11; -1.83 1.11; 0 0" dur="1.26s" begin="0.00s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<g id="Group_48097767" data-ellipse="Ellipse_13">
+<path d="M1005.12 7.21436L983.807 10.036V25.0586L1009.9 22.9693L1002.25 16.3741L1005.12 7.21436Z" fill="#C0E81F"/>
+<path d="M983.614 9.89368V42.888" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097768" data-ellipse="Ellipse_21">
+<path d="M76.6278 7.21436L97.9384 10.036V25.0586L71.8465 22.9693L79.4971 16.3741L76.6278 7.21436Z" fill="#F46A6A"/>
+<path d="M98.1309 9.89368V42.888" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097770" data-ellipse="Ellipse_21">
+<path d="M168.282 77.403L146.971 80.2246V95.2472L173.063 93.1579L165.413 86.5627L168.282 77.403Z" fill="#C0E81F"/>
+<path d="M146.777 80.0823V113.077" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097771" data-ellipse="Ellipse_148">
+<path d="M1064.64 72.6827L1043.33 75.5044V90.5269L1069.42 88.4377L1061.77 81.8425L1064.64 72.6827Z" fill="#1FB6E8"/>
+<path d="M1043.14 75.3621V108.356" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<circle cx="331.027" cy="68.5895" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.93; -1.17 0.93; 0 0" dur="0.91s" begin="-0.06s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="208.268" cy="61.9187" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.11; -1.39 1.11; 0 0" dur="0.98s" begin="-0.12s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="293.413" cy="83.2707" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.29; -1.61 1.29; 0 0" dur="1.05s" begin="-0.18s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="262.426" cy="103.053" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.75; -1.83 0.75; 0 0" dur="1.12s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="228.052" cy="98.6787" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.93; -0.95 0.93; 0 0" dur="1.19s" begin="-0.30s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="350.812" cy="103.874" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.11; -1.17 1.11; 0 0" dur="1.26s" begin="-0.36s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="327.786" cy="103.053" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.29; -1.39 1.29; 0 0" dur="0.84s" begin="-0.42s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="297.208" cy="55.4208" r="9.89256" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.75; -1.61 0.75; 0 0" dur="0.91s" begin="-0.48s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="267.531" cy="63.1268" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.93; -1.83 0.93; 0 0" dur="0.98s" begin="-0.54s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="233.712" cy="63.1268" r="9.89256" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.11; -0.95 1.11; 0 0" dur="1.05s" begin="-0.60s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 595.528 71.0859)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.29; -1.17 1.29; 0 0" dur="1.12s" begin="-0.66s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 633.144 94.9609)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.75; -1.39 0.75; 0 0" dur="1.19s" begin="-0.72s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 664.13 114.75)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.93; -1.61 0.93; 0 0" dur="1.26s" begin="-0.78s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 698.503 110.375)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.11; -1.83 1.11; 0 0" dur="0.84s" begin="-0.84s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 629.349 67.1172)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.29; -0.95 1.29; 0 0" dur="0.91s" begin="-0.90s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 659.024 74.8203)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.75; -1.17 0.75; 0 0" dur="0.98s" begin="-0.96s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 732.415 94.9609)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.93; -1.39 0.93; 0 0" dur="1.05s" begin="0.00s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 692.845 74.8203)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="1.12s" begin="-0.06s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 766.231 94.9609)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.29; -1.83 1.29; 0 0" dur="1.19s" begin="-0.12s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 821.636 78.8945)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.75; -0.95 0.75; 0 0" dur="1.26s" begin="-0.18s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 844.712 78.4805)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.93; -1.17 0.93; 0 0" dur="0.84s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 867.29 78.4805)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.11; -1.39 1.11; 0 0" dur="0.91s" begin="-0.30s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 857.86 53.5898)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.29; -1.61 1.29; 0 0" dur="0.98s" begin="-0.36s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 791.759 93.1641)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.75; -1.83 0.75; 0 0" dur="1.05s" begin="-0.42s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 756.339 60.5)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.93; -0.95 0.93; 0 0" dur="1.12s" begin="-0.48s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 777.925 60.5)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.11; -1.17 1.11; 0 0" dur="1.19s" begin="-0.54s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 877.643 29.1875)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.29; -1.39 1.29; 0 0" dur="1.26s" begin="-0.60s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 824.929 42.3984)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.75; -1.61 0.75; 0 0" dur="0.84s" begin="-0.66s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 406.017 75.0859)" fill="#009D6E">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.93; -1.83 0.93; 0 0" dur="0.91s" begin="-0.72s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 463.415 90.4609)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.11; -0.95 1.11; 0 0" dur="0.98s" begin="-0.78s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 316.991 93.1719)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.29; -1.17 1.29; 0 0" dur="1.05s" begin="-0.84s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 613.358 94.8711)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.75; -1.39 0.75; 0 0" dur="1.12s" begin="-0.90s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 674.022 52.6367)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.93; -1.61 0.93; 0 0" dur="1.19s" begin="-0.96s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 833.204 103.059)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.11; -1.83 1.11; 0 0" dur="1.26s" begin="0.00s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 855.724 103.059)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.29; -0.95 1.29; 0 0" dur="0.84s" begin="-0.06s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 1067.62 0)" fill="#05C78D">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.75; -1.17 0.75; 0 0" dur="0.91s" begin="-0.12s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 443.63 89.7695)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -0.93; -1.39 0.93; 0 0" dur="0.98s" begin="-0.18s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 474.618 109.555)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="1.05s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 588.255 106.277)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -1.29; -1.83 1.29; 0 0" dur="1.12s" begin="-0.30s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 508.991 105.18)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.75; -0.95 0.75; 0 0" dur="1.19s" begin="-0.36s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 386.231 110.375)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -0.93; -1.17 0.93; 0 0" dur="1.26s" begin="-0.42s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 409.257 109.555)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.11; -1.39 1.11; 0 0" dur="0.84s" begin="-0.48s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 439.835 61.9219)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.29; -1.61 1.29; 0 0" dur="0.91s" begin="-0.54s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 543.364 106.277)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.75; -1.83 0.75; 0 0" dur="0.98s" begin="-0.60s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 564.952 106.277)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -0.93; -0.95 0.93; 0 0" dur="1.05s" begin="-0.66s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 722.521 64.9258)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.17 -1.11; -1.17 1.11; 0 0" dur="1.12s" begin="-0.72s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 469.513 69.625)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.39 -1.29; -1.39 1.29; 0 0" dur="1.19s" begin="-0.78s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 503.333 69.625)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -0.75; -1.61 0.75; 0 0" dur="1.26s" begin="-0.84s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 572.952 70.6797)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.83 -0.93; -1.83 0.93; 0 0" dur="0.84s" begin="-0.90s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<circle cx="9.89256" cy="9.89256" r="9.89256" transform="matrix(-1 0 0 1 540.304 73.3789)" fill="#00714F">
+<animateTransform attributeName="transform" type="translate" values="0 0; 0.95 -1.11; -0.95 1.11; 0 0" dur="0.91s" begin="-0.96s" repeatCount="indefinite" additive="sum"/>
+</circle>
+<g id="Group_48097772" data-ellipse="Ellipse_112">
+<path d="M657.213 92.007L678.523 94.8286V109.851L652.432 107.762L660.082 101.167L657.213 92.007Z" fill="#1FB6E8"/>
+<path d="M678.718 94.6843V127.679" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097773" data-ellipse="Ellipse_124">
+<path d="M561.807 53.2458L540.496 56.0675V71.0901L566.588 69.0008L558.937 62.4056L561.807 53.2458Z" fill="white"/>
+<path d="M540.304 55.9252V88.9195" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097774" data-ellipse="Ellipse_21">
+<path d="M800.121 42.1123L778.811 44.9339V59.9565L804.903 57.8672L797.252 51.2721L800.121 42.1123Z" fill="#C0E81F"/>
+<path d="M778.616 44.7916V77.7859" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097775" data-ellipse="Ellipse_13">
+<path d="M231.028 75.3247L252.339 78.1463V93.1689L226.247 91.0796L233.897 84.4845L231.028 75.3247Z" fill="#F46A6A"/>
+<path d="M252.533 78.006V111" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+<g id="Group_48097776" data-ellipse="Ellipse_23">
+<path d="M382.209 71.9304L360.898 74.752V89.7746L386.99 87.6854L379.339 81.0902L382.209 71.9304Z" fill="#1F7AE8"/>
+<path d="M360.704 74.6097V107.604" stroke="black"/>
+<animateTransform attributeName="transform" type="translate" values="0 0; 1.61 -1.11; -1.61 1.11; 0 0" dur="0.77s" begin="-0.24s" repeatCount="indefinite" additive="sum"/>
+</g>
+</g>
+<rect x="497.757" y="365.376" width="284.173" height="45.8212" fill="#003324"/>
+<rect x="407.32" width="16.9684" height="393.573" fill="#003324"/>
+<rect x="855.294" width="16.9684" height="393.573" fill="#003324"/>
+<path d="M0.0236956 234.249C0.0236956 234.249 368.085 406.345 640.627 406.345C913.168 406.345 1271.91 234.249 1271.91 234.249L1271.9 378.843C1271.9 378.843 917.149 476.441 643.315 476.441C369.482 476.441 0.0217285 378.843 0.0217285 378.843L0.0236956 234.249Z" fill="#003324"/>
+<path d="M781.427 378.045L776.408 378.354C776.322 377.925 776.137 377.539 775.854 377.195C775.571 376.844 775.198 376.565 774.735 376.359C774.28 376.144 773.735 376.037 773.1 376.037C772.251 376.037 771.535 376.217 770.951 376.578C770.368 376.929 770.076 377.401 770.076 377.993C770.076 378.465 770.265 378.864 770.642 379.19C771.02 379.516 771.668 379.778 772.586 379.975L776.163 380.696C778.085 381.09 779.518 381.725 780.461 382.6C781.405 383.475 781.877 384.625 781.877 386.049C781.877 387.345 781.495 388.481 780.732 389.459C779.977 390.438 778.939 391.201 777.617 391.75C776.305 392.291 774.791 392.561 773.075 392.561C770.458 392.561 768.373 392.016 766.82 390.927C765.276 389.828 764.371 388.336 764.105 386.448L769.497 386.165C769.66 386.963 770.055 387.572 770.681 387.992C771.307 388.404 772.109 388.61 773.088 388.61C774.048 388.61 774.821 388.426 775.404 388.057C775.996 387.679 776.296 387.195 776.305 386.603C776.296 386.105 776.086 385.697 775.674 385.38C775.262 385.054 774.627 384.805 773.77 384.634L770.346 383.952C768.416 383.565 766.979 382.896 766.035 381.944C765.1 380.992 764.633 379.778 764.633 378.302C764.633 377.032 764.976 375.939 765.662 375.021C766.357 374.103 767.331 373.395 768.583 372.897C769.845 372.4 771.32 372.151 773.01 372.151C775.507 372.151 777.472 372.678 778.904 373.734C780.346 374.789 781.186 376.226 781.427 378.045Z" fill="white"/>
+<path d="M753.775 392.174V372.408H759.09V375.856H759.296C759.656 374.63 760.261 373.703 761.11 373.077C761.96 372.442 762.938 372.124 764.045 372.124C764.319 372.124 764.615 372.142 764.933 372.176C765.25 372.21 765.529 372.257 765.769 372.317V377.182C765.512 377.105 765.156 377.036 764.701 376.976C764.246 376.916 763.83 376.886 763.453 376.886C762.646 376.886 761.925 377.062 761.291 377.414C760.664 377.757 760.167 378.237 759.798 378.855C759.437 379.473 759.257 380.185 759.257 380.991V392.174H753.775Z" fill="white"/>
+<path d="M744.107 392.561C742.108 392.561 740.379 392.136 738.921 391.287C737.471 390.429 736.351 389.236 735.562 387.709C734.773 386.174 734.378 384.393 734.378 382.369C734.378 380.327 734.773 378.542 735.562 377.015C736.351 375.48 737.471 374.287 738.921 373.438C740.379 372.58 742.108 372.151 744.107 372.151C746.106 372.151 747.831 372.58 749.28 373.438C750.739 374.287 751.863 375.48 752.652 377.015C753.441 378.542 753.836 380.327 753.836 382.369C753.836 384.393 753.441 386.174 752.652 387.709C751.863 389.236 750.739 390.429 749.28 391.287C747.831 392.136 746.106 392.561 744.107 392.561ZM744.133 388.314C745.042 388.314 745.801 388.057 746.411 387.542C747.02 387.019 747.479 386.307 747.788 385.406C748.105 384.505 748.264 383.48 748.264 382.33C748.264 381.18 748.105 380.155 747.788 379.254C747.479 378.354 747.02 377.642 746.411 377.118C745.801 376.595 745.042 376.333 744.133 376.333C743.215 376.333 742.443 376.595 741.816 377.118C741.199 377.642 740.731 378.354 740.414 379.254C740.105 380.155 739.95 381.18 739.95 382.33C739.95 383.48 740.105 384.505 740.414 385.406C740.731 386.307 741.199 387.019 741.816 387.542C742.443 388.057 743.215 388.314 744.133 388.314Z" fill="white"/>
+<path d="M734.896 378.045L729.877 378.354C729.792 377.925 729.607 377.539 729.324 377.195C729.041 376.844 728.668 376.565 728.204 376.359C727.75 376.144 727.205 376.037 726.57 376.037C725.721 376.037 725.004 376.217 724.421 376.578C723.838 376.929 723.546 377.401 723.546 377.993C723.546 378.465 723.735 378.864 724.112 379.19C724.49 379.516 725.137 379.778 726.055 379.975L729.633 380.696C731.555 381.09 732.987 381.725 733.931 382.6C734.875 383.475 735.347 384.625 735.347 386.049C735.347 387.345 734.965 388.481 734.201 389.459C733.446 390.438 732.408 391.201 731.087 391.75C729.774 392.291 728.26 392.561 726.544 392.561C723.928 392.561 721.843 392.016 720.29 390.927C718.746 389.828 717.841 388.336 717.575 386.448L722.967 386.165C723.13 386.963 723.524 387.572 724.151 387.992C724.777 388.404 725.579 388.61 726.557 388.61C727.518 388.61 728.29 388.426 728.874 388.057C729.466 387.679 729.766 387.195 729.774 386.603C729.766 386.105 729.556 385.697 729.144 385.38C728.732 385.054 728.097 384.805 727.239 384.634L723.816 383.952C721.886 383.565 720.449 382.896 719.505 381.944C718.57 380.992 718.102 379.778 718.102 378.302C718.102 377.032 718.446 375.939 719.132 375.021C719.827 374.103 720.801 373.395 722.053 372.897C723.314 372.4 724.79 372.151 726.48 372.151C728.977 372.151 730.941 372.678 732.374 373.734C733.815 374.789 734.656 376.226 734.896 378.045Z" fill="white"/>
+<path d="M718.171 378.045L713.152 378.354C713.066 377.925 712.882 377.539 712.598 377.195C712.315 376.844 711.942 376.565 711.479 376.359C711.024 376.144 710.479 376.037 709.845 376.037C708.995 376.037 708.279 376.217 707.695 376.578C707.112 376.929 706.82 377.401 706.82 377.993C706.82 378.465 707.009 378.864 707.387 379.19C707.764 379.516 708.412 379.778 709.33 379.975L712.907 380.696C714.829 381.09 716.262 381.725 717.206 382.6C718.149 383.475 718.621 384.625 718.621 386.049C718.621 387.345 718.239 388.481 717.476 389.459C716.721 390.438 715.683 391.201 714.362 391.75C713.049 392.291 711.535 392.561 709.819 392.561C707.202 392.561 705.117 392.016 703.564 390.927C702.02 389.828 701.115 388.336 700.849 386.448L706.241 386.165C706.404 386.963 706.799 387.572 707.425 387.992C708.051 388.404 708.854 388.61 709.832 388.61C710.793 388.61 711.565 388.426 712.148 388.057C712.74 387.679 713.04 387.195 713.049 386.603C713.04 386.105 712.83 385.697 712.418 385.38C712.006 385.054 711.372 384.805 710.514 384.634L707.091 383.952C705.16 383.565 703.723 382.896 702.779 381.944C701.844 380.992 701.377 379.778 701.377 378.302C701.377 377.032 701.72 375.939 702.406 375.021C703.101 374.103 704.075 373.395 705.328 372.897C706.589 372.4 708.064 372.151 709.754 372.151C712.251 372.151 714.216 372.678 715.648 373.734C717.09 374.789 717.931 376.226 718.171 378.045Z" fill="white"/>
+<path d="M695.476 392.175V372.409H700.958V392.175H695.476ZM698.23 369.86C697.415 369.86 696.716 369.59 696.133 369.05C695.558 368.501 695.27 367.844 695.27 367.081C695.27 366.326 695.558 365.678 696.133 365.138C696.716 364.589 697.415 364.314 698.23 364.314C699.045 364.314 699.74 364.589 700.315 365.138C700.898 365.678 701.19 366.326 701.19 367.081C701.19 367.844 700.898 368.501 700.315 369.05C699.74 369.59 699.045 369.86 698.23 369.86Z" fill="white"/>
+<path d="M686.762 392.561C684.737 392.561 682.995 392.132 681.537 391.274C680.087 390.407 678.972 389.206 678.191 387.671C677.419 386.135 677.033 384.368 677.033 382.369C677.033 380.344 677.423 378.568 678.204 377.041C678.993 375.505 680.113 374.308 681.563 373.451C683.012 372.584 684.737 372.151 686.736 372.151C688.46 372.151 689.97 372.464 691.266 373.09C692.561 373.716 693.586 374.596 694.341 375.728C695.096 376.861 695.513 378.191 695.59 379.718H690.416C690.271 378.731 689.885 377.937 689.258 377.337C688.641 376.728 687.83 376.423 686.826 376.423C685.977 376.423 685.235 376.655 684.6 377.118C683.973 377.573 683.484 378.238 683.133 379.113C682.781 379.988 682.605 381.047 682.605 382.291C682.605 383.553 682.777 384.625 683.12 385.509C683.471 386.392 683.965 387.066 684.6 387.529C685.235 387.992 685.977 388.224 686.826 388.224C687.452 388.224 688.014 388.095 688.512 387.838C689.018 387.581 689.434 387.207 689.76 386.718C690.095 386.221 690.313 385.625 690.416 384.93H695.59C695.504 386.44 695.092 387.769 694.354 388.919C693.625 390.06 692.617 390.952 691.33 391.596C690.043 392.239 688.52 392.561 686.762 392.561Z" fill="white"/>
+<path d="M672.108 373.398C672.005 372.36 671.563 371.554 670.782 370.979C670.002 370.404 668.942 370.117 667.604 370.117C666.694 370.117 665.927 370.245 665.3 370.503C664.674 370.752 664.194 371.099 663.859 371.545C663.533 371.991 663.37 372.498 663.37 373.064C663.353 373.536 663.451 373.947 663.666 374.299C663.889 374.651 664.194 374.956 664.58 375.213C664.966 375.462 665.412 375.68 665.918 375.869C666.424 376.049 666.965 376.204 667.539 376.333L669.907 376.899C671.057 377.156 672.112 377.499 673.073 377.928C674.034 378.357 674.866 378.885 675.57 379.511C676.273 380.137 676.818 380.875 677.204 381.725C677.599 382.574 677.8 383.548 677.809 384.646C677.8 386.259 677.388 387.657 676.573 388.841C675.767 390.016 674.6 390.93 673.073 391.582C671.555 392.226 669.723 392.547 667.578 392.547C665.45 392.547 663.597 392.221 662.019 391.569C660.449 390.917 659.222 389.952 658.338 388.674C657.463 387.387 657.004 385.795 656.961 383.899H662.353C662.413 384.783 662.666 385.521 663.113 386.113C663.567 386.696 664.172 387.138 664.927 387.438C665.691 387.73 666.553 387.876 667.514 387.876C668.457 387.876 669.277 387.739 669.972 387.464C670.675 387.19 671.22 386.808 671.606 386.319C671.992 385.83 672.185 385.268 672.185 384.633C672.185 384.041 672.009 383.543 671.658 383.14C671.314 382.737 670.808 382.394 670.139 382.111C669.478 381.828 668.668 381.57 667.707 381.339L664.837 380.618C662.615 380.077 660.86 379.232 659.574 378.083C658.287 376.933 657.648 375.384 657.656 373.437C657.648 371.841 658.072 370.447 658.93 369.255C659.797 368.062 660.985 367.131 662.495 366.462C664.005 365.793 665.721 365.458 667.642 365.458C669.598 365.458 671.306 365.793 672.764 366.462C674.231 367.131 675.372 368.062 676.187 369.255C677.002 370.447 677.423 371.828 677.449 373.398H672.108Z" fill="white"/>
+<path d="M645.548 392.174V372.408H650.863V375.856H651.069C651.429 374.63 652.034 373.703 652.883 373.077C653.733 372.442 654.711 372.124 655.817 372.124C656.092 372.124 656.388 372.142 656.705 372.176C657.023 372.21 657.302 372.257 657.542 372.317V377.182C657.284 377.105 656.928 377.036 656.474 376.976C656.019 376.916 655.603 376.886 655.225 376.886C654.419 376.886 653.698 377.062 653.063 377.414C652.437 377.757 651.94 378.237 651.571 378.855C651.21 379.473 651.03 380.185 651.03 380.991V392.174H645.548Z" fill="white"/>
+<path d="M636.521 392.561C634.488 392.561 632.738 392.149 631.271 391.325C629.812 390.493 628.689 389.318 627.899 387.799C627.11 386.272 626.715 384.466 626.715 382.382C626.715 380.348 627.11 378.564 627.899 377.028C628.689 375.492 629.8 374.296 631.232 373.438C632.674 372.58 634.364 372.151 636.303 372.151C637.607 372.151 638.821 372.361 639.945 372.781C641.077 373.193 642.064 373.815 642.904 374.647C643.754 375.48 644.414 376.526 644.886 377.787C645.358 379.04 645.594 380.507 645.594 382.189V383.694H628.903V380.297H640.434C640.434 379.507 640.262 378.808 639.919 378.199C639.576 377.59 639.1 377.114 638.49 376.771C637.89 376.419 637.191 376.243 636.393 376.243C635.561 376.243 634.823 376.436 634.179 376.822C633.544 377.2 633.047 377.71 632.687 378.354C632.326 378.988 632.142 379.696 632.133 380.477V383.707C632.133 384.685 632.313 385.53 632.674 386.242C633.043 386.954 633.562 387.503 634.231 387.889C634.9 388.276 635.694 388.469 636.612 388.469C637.221 388.469 637.778 388.383 638.285 388.211C638.791 388.04 639.224 387.782 639.584 387.439C639.945 387.096 640.219 386.675 640.408 386.178L645.478 386.512C645.221 387.731 644.693 388.795 643.895 389.704C643.106 390.605 642.085 391.308 640.833 391.814C639.589 392.312 638.152 392.561 636.521 392.561Z" fill="white"/>
+<path d="M608.204 399.587V372.408H613.609V375.728H613.853C614.094 375.196 614.441 374.656 614.896 374.107C615.359 373.549 615.96 373.086 616.697 372.717C617.444 372.34 618.37 372.151 619.477 372.151C620.918 372.151 622.248 372.528 623.466 373.283C624.685 374.03 625.658 375.158 626.388 376.668C627.117 378.169 627.482 380.052 627.482 382.317C627.482 384.522 627.125 386.384 626.413 387.902C625.71 389.412 624.749 390.558 623.531 391.338C622.321 392.11 620.966 392.497 619.464 392.497C618.4 392.497 617.495 392.321 616.749 391.969C616.011 391.617 615.406 391.175 614.934 390.643C614.462 390.103 614.102 389.558 613.853 389.009H613.686V399.587H608.204ZM613.57 382.291C613.57 383.467 613.733 384.492 614.059 385.367C614.385 386.242 614.857 386.924 615.475 387.413C616.093 387.894 616.843 388.134 617.727 388.134C618.619 388.134 619.374 387.889 619.992 387.4C620.61 386.903 621.077 386.216 621.395 385.341C621.721 384.458 621.884 383.441 621.884 382.291C621.884 381.15 621.725 380.147 621.407 379.28C621.09 378.414 620.622 377.736 620.005 377.247C619.387 376.758 618.628 376.513 617.727 376.513C616.835 376.513 616.08 376.749 615.462 377.221C614.853 377.693 614.385 378.362 614.059 379.229C613.733 380.095 613.57 381.116 613.57 382.291Z" fill="white"/>
+<path d="M596.443 392.548C595.182 392.548 594.058 392.329 593.072 391.892C592.085 391.446 591.304 390.789 590.729 389.923C590.163 389.048 589.88 387.958 589.88 386.654C589.88 385.556 590.082 384.634 590.485 383.887C590.888 383.141 591.437 382.54 592.132 382.086C592.827 381.631 593.616 381.288 594.5 381.056C595.392 380.824 596.327 380.661 597.306 380.567C598.455 380.447 599.382 380.335 600.085 380.232C600.789 380.121 601.299 379.958 601.617 379.743C601.934 379.529 602.093 379.212 602.093 378.791V378.714C602.093 377.899 601.835 377.268 601.321 376.822C600.814 376.376 600.094 376.153 599.159 376.153C598.172 376.153 597.387 376.372 596.804 376.809C596.22 377.238 595.834 377.779 595.645 378.431L590.575 378.019C590.832 376.818 591.339 375.78 592.094 374.905C592.849 374.021 593.822 373.343 595.015 372.871C596.216 372.391 597.606 372.151 599.184 372.151C600.283 372.151 601.333 372.279 602.337 372.537C603.35 372.794 604.246 373.193 605.027 373.734C605.816 374.274 606.438 374.969 606.893 375.818C607.348 376.659 607.575 377.667 607.575 378.843V392.175H602.376V389.434H602.221C601.904 390.051 601.479 390.596 600.947 391.068C600.416 391.531 599.776 391.896 599.03 392.162C598.284 392.419 597.421 392.548 596.443 392.548ZM598.013 388.765C598.82 388.765 599.532 388.606 600.15 388.288C600.767 387.962 601.252 387.525 601.604 386.976C601.955 386.427 602.131 385.805 602.131 385.11V383.012C601.96 383.124 601.724 383.227 601.424 383.321C601.132 383.407 600.802 383.488 600.433 383.566C600.064 383.634 599.695 383.698 599.326 383.759C598.957 383.81 598.622 383.857 598.322 383.9C597.679 383.994 597.117 384.145 596.636 384.351C596.156 384.556 595.783 384.835 595.517 385.187C595.251 385.53 595.118 385.959 595.118 386.474C595.118 387.22 595.388 387.791 595.929 388.185C596.478 388.572 597.173 388.765 598.013 388.765Z" fill="white"/>
+<path d="M571.601 392.176V365.82H581.999C583.998 365.82 585.701 366.202 587.108 366.965C588.515 367.72 589.587 368.771 590.325 370.118C591.071 371.457 591.445 373.001 591.445 374.751C591.445 376.501 591.067 378.046 590.312 379.384C589.557 380.722 588.463 381.765 587.031 382.511C585.606 383.257 583.882 383.631 581.857 383.631H575.23V379.165H580.956C582.029 379.165 582.912 378.981 583.607 378.612C584.311 378.234 584.834 377.715 585.177 377.055C585.529 376.385 585.705 375.618 585.705 374.751C585.705 373.876 585.529 373.112 585.177 372.46C584.834 371.8 584.311 371.289 583.607 370.929C582.904 370.56 582.012 370.376 580.931 370.376H577.173V392.176H571.601Z" fill="white"/>
+<path d="M558.833 386.488L558.846 379.912H559.644L565.976 372.409H572.269L563.762 382.344H562.462L558.833 386.488ZM553.866 392.176V365.82H559.348V392.176H553.866ZM566.22 392.176L560.403 383.566L564.058 379.693L572.642 392.176H566.22Z" fill="white"/>
+<path d="M545.152 392.561C543.127 392.561 541.386 392.132 539.927 391.274C538.477 390.407 537.362 389.206 536.581 387.671C535.809 386.135 535.423 384.368 535.423 382.369C535.423 380.344 535.813 378.568 536.594 377.041C537.383 375.505 538.503 374.308 539.953 373.451C541.403 372.584 543.127 372.151 545.126 372.151C546.851 372.151 548.361 372.464 549.656 373.09C550.952 373.716 551.977 374.596 552.732 375.728C553.487 376.861 553.903 378.191 553.98 379.718H548.807C548.661 378.731 548.275 377.937 547.649 377.337C547.031 376.728 546.22 376.423 545.216 376.423C544.367 376.423 543.625 376.655 542.99 377.118C542.364 377.573 541.875 378.238 541.523 379.113C541.171 379.988 540.995 381.047 540.995 382.291C540.995 383.553 541.167 384.625 541.51 385.509C541.862 386.392 542.355 387.066 542.99 387.529C543.625 387.992 544.367 388.224 545.216 388.224C545.843 388.224 546.405 388.095 546.902 387.838C547.408 387.581 547.824 387.207 548.15 386.718C548.485 386.221 548.704 385.625 548.807 384.93H553.98C553.894 386.44 553.483 387.769 552.745 388.919C552.015 390.06 551.007 390.952 549.72 391.596C548.434 392.239 546.911 392.561 545.152 392.561Z" fill="white"/>
+<path d="M526.551 392.561C524.552 392.561 522.823 392.136 521.365 391.287C519.915 390.429 518.795 389.236 518.006 387.709C517.217 386.174 516.822 384.393 516.822 382.369C516.822 380.327 517.217 378.542 518.006 377.015C518.795 375.48 519.915 374.287 521.365 373.438C522.823 372.58 524.552 372.151 526.551 372.151C528.55 372.151 530.274 372.58 531.724 373.438C533.183 374.287 534.307 375.48 535.096 377.015C535.885 378.542 536.28 380.327 536.28 382.369C536.28 384.393 535.885 386.174 535.096 387.709C534.307 389.236 533.183 390.429 531.724 391.287C530.274 392.136 528.55 392.561 526.551 392.561ZM526.577 388.314C527.486 388.314 528.245 388.057 528.855 387.542C529.464 387.019 529.923 386.307 530.232 385.406C530.549 384.505 530.708 383.48 530.708 382.33C530.708 381.18 530.549 380.155 530.232 379.254C529.923 378.354 529.464 377.642 528.855 377.118C528.245 376.595 527.486 376.333 526.577 376.333C525.659 376.333 524.887 376.595 524.26 377.118C523.643 377.642 523.175 378.354 522.858 379.254C522.549 380.155 522.394 381.18 522.394 382.33C522.394 383.48 522.549 384.505 522.858 385.406C523.175 386.307 523.643 387.019 524.26 387.542C524.887 388.057 525.659 388.314 526.577 388.314Z" fill="white"/>
+<path d="M497.883 392.176V365.82H508.281C510.271 365.82 511.97 366.176 513.377 366.888C514.793 367.592 515.869 368.591 516.607 369.887C517.354 371.174 517.727 372.688 517.727 374.429C517.727 376.18 517.349 377.685 516.594 378.946C515.839 380.199 514.745 381.16 513.313 381.829C511.889 382.498 510.164 382.833 508.139 382.833H501.177V378.354H507.239C508.302 378.354 509.186 378.209 509.89 377.917C510.593 377.625 511.116 377.188 511.46 376.604C511.811 376.021 511.987 375.296 511.987 374.429C511.987 373.554 511.811 372.816 511.46 372.216C511.116 371.615 510.589 371.161 509.877 370.852C509.173 370.534 508.285 370.376 507.213 370.376H503.455V392.176H497.883ZM512.116 380.182L518.666 392.176H512.515L506.106 380.182H512.116Z" fill="white"/>
+<path d="M630.282 405.284C630.195 405.011 630.078 404.766 629.931 404.55C629.787 404.331 629.615 404.145 629.414 403.992C629.213 403.837 628.984 403.718 628.726 403.637C628.471 403.556 628.19 403.516 627.884 403.516C627.366 403.516 626.898 403.649 626.481 403.916C626.064 404.183 625.734 404.574 625.491 405.09C625.251 405.603 625.131 406.231 625.131 406.975C625.131 407.722 625.253 408.353 625.496 408.869C625.739 409.385 626.072 409.776 626.494 410.043C626.917 410.31 627.399 410.443 627.938 410.443C628.439 410.443 628.876 410.341 629.247 410.137C629.622 409.933 629.912 409.645 630.116 409.274C630.323 408.899 630.426 408.458 630.426 407.951L630.786 408.019H628.15V406.871H631.771V407.92C631.771 408.693 631.606 409.365 631.276 409.935C630.949 410.502 630.496 410.94 629.918 411.248C629.342 411.557 628.682 411.712 627.938 411.712C627.105 411.712 626.373 411.52 625.743 411.136C625.116 410.752 624.628 410.208 624.277 409.503C623.926 408.795 623.75 407.956 623.75 406.984C623.75 406.249 623.852 405.589 624.056 405.005C624.26 404.42 624.547 403.924 624.915 403.516C625.287 403.105 625.724 402.791 626.224 402.575C626.728 402.357 627.279 402.247 627.875 402.247C628.373 402.247 628.837 402.321 629.265 402.468C629.697 402.614 630.081 402.823 630.417 403.093C630.756 403.363 631.036 403.684 631.258 404.055C631.48 404.424 631.63 404.834 631.708 405.284H630.282ZM635.312 411.739C634.874 411.739 634.478 411.658 634.124 411.496C633.77 411.331 633.49 411.092 633.283 410.781C633.079 410.469 632.977 410.086 632.977 409.634C632.977 409.244 633.052 408.923 633.202 408.671C633.352 408.419 633.554 408.22 633.809 408.073C634.064 407.926 634.349 407.815 634.664 407.74C634.979 407.665 635.3 407.608 635.627 407.569C636.04 407.521 636.376 407.482 636.634 407.452C636.892 407.419 637.08 407.366 637.197 407.294C637.313 407.222 637.372 407.105 637.372 406.943V406.912C637.372 406.519 637.261 406.215 637.039 405.999C636.82 405.783 636.493 405.675 636.058 405.675C635.606 405.675 635.249 405.775 634.988 405.976C634.73 406.174 634.551 406.395 634.452 406.638L633.188 406.35C633.338 405.93 633.557 405.591 633.845 405.333C634.136 405.072 634.47 404.883 634.848 404.766C635.226 404.646 635.624 404.586 636.04 404.586C636.316 404.586 636.609 404.619 636.918 404.685C637.23 404.748 637.52 404.865 637.79 405.036C638.063 405.207 638.287 405.451 638.461 405.769C638.635 406.084 638.721 406.494 638.721 406.997V411.586H637.408V410.641H637.354C637.267 410.815 637.137 410.986 636.963 411.154C636.789 411.322 636.565 411.461 636.292 411.572C636.019 411.683 635.693 411.739 635.312 411.739ZM635.604 410.659C635.976 410.659 636.294 410.586 636.558 410.439C636.825 410.292 637.027 410.1 637.165 409.863C637.306 409.623 637.376 409.367 637.376 409.094V408.203C637.328 408.251 637.236 408.296 637.098 408.338C636.963 408.377 636.808 408.411 636.634 408.441C636.46 408.468 636.291 408.494 636.126 408.518C635.961 408.539 635.823 408.557 635.712 408.572C635.451 408.605 635.213 408.66 634.997 408.738C634.784 408.816 634.613 408.929 634.484 409.076C634.358 409.22 634.295 409.412 634.295 409.651C634.295 409.984 634.418 410.236 634.664 410.407C634.91 410.575 635.223 410.659 635.604 410.659ZM640.386 411.586V404.676H641.677V405.801H641.763C641.907 405.42 642.142 405.123 642.469 404.91C642.796 404.694 643.187 404.586 643.643 404.586C644.105 404.586 644.492 404.694 644.804 404.91C645.119 405.126 645.351 405.423 645.501 405.801H645.573C645.738 405.432 646 405.138 646.36 404.919C646.72 404.697 647.149 404.586 647.647 404.586C648.274 404.586 648.785 404.783 649.181 405.176C649.58 405.568 649.779 406.161 649.779 406.952V411.586H648.434V407.078C648.434 406.611 648.307 406.272 648.052 406.062C647.797 405.852 647.492 405.747 647.138 405.747C646.701 405.747 646.36 405.882 646.117 406.152C645.874 406.419 645.753 406.762 645.753 407.182V411.586H644.412V406.993C644.412 406.618 644.295 406.317 644.062 406.089C643.828 405.861 643.523 405.747 643.148 405.747C642.893 405.747 642.658 405.814 642.442 405.949C642.229 406.081 642.057 406.266 641.925 406.503C641.796 406.74 641.731 407.014 641.731 407.326V411.586H640.386ZM654.433 411.725C653.752 411.725 653.166 411.58 652.674 411.289C652.185 410.995 651.807 410.583 651.541 410.052C651.277 409.518 651.145 408.893 651.145 408.176C651.145 407.468 651.277 406.844 651.541 406.305C651.807 405.765 652.179 405.344 652.656 405.041C653.136 404.738 653.697 404.586 654.339 404.586C654.728 404.586 655.106 404.651 655.472 404.78C655.838 404.909 656.166 405.111 656.457 405.387C656.748 405.663 656.978 406.021 657.146 406.462C657.313 406.9 657.397 407.432 657.397 408.059V408.536H651.905V407.528H656.079C656.079 407.174 656.007 406.861 655.864 406.588C655.72 406.312 655.517 406.095 655.256 405.936C654.998 405.777 654.695 405.697 654.348 405.697C653.97 405.697 653.64 405.79 653.358 405.976C653.079 406.159 652.863 406.399 652.71 406.696C652.56 406.99 652.485 407.309 652.485 407.654V408.441C652.485 408.903 652.566 409.296 652.728 409.62C652.893 409.944 653.122 410.191 653.416 410.362C653.71 410.53 654.054 410.614 654.447 410.614C654.701 410.614 654.934 410.578 655.144 410.506C655.354 410.431 655.535 410.32 655.688 410.173C655.841 410.026 655.958 409.845 656.039 409.629L657.312 409.858C657.21 410.233 657.027 410.562 656.763 410.844C656.502 411.122 656.174 411.34 655.778 411.496C655.385 411.649 654.937 411.725 654.433 411.725Z" fill="white"/>
+<rect x="660.735" y="406.74" width="3.04102" height="3.04102" rx="0.5" fill="white"/>
+<rect x="617.492" y="406.74" width="3.04102" height="3.04102" rx="0.5" fill="white"/>
+</svg>
