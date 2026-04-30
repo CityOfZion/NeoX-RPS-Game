@@ -1,4 +1,4 @@
-# Anti-MEV Beat the House Demo
+# Simple Rock Paper Scissors Game
 
 This repo now demonstrates a simpler anti-MEV flow than the earlier commit/reveal RPS version.
 
