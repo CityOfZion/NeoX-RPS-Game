@@ -1,4 +1,4 @@
-# Simple Rock Paper Scissors Game
+# Rock Paper Scissors
 
 This repo now demonstrates a simpler anti-MEV flow than the earlier commit/reveal RPS version.
 

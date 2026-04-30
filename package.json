@@ -1,7 +1,7 @@
 {
   "name": "anti-mev-beat-the-house",
   "version": "1.0.0",
-  "description": "Simple Rock Paper Scissors game",
+  "description": "Rock Paper Scissors",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
