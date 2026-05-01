@@ -15,6 +15,7 @@ import {
 import { formatEther, parseEther } from 'viem';
 import lottie from 'lottie-web';
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from '../config/contract';
+import { neox } from '../config/wagmi';
 import { EnvelopeStatus, sendEnvelopeContractCall } from '../lib/envelope';
 
 const NEOX_CHAIN_ID = 47763;
@@ -268,10 +269,12 @@ export default function Home() {
   const [lastRoundId, setLastRoundId] = useState<number | null>(null);
   const [activeAction, setActiveAction] = useState<'start' | 'submit' | 'refund' | null>(null);
   const [movePreviewOpen, setMovePreviewOpen] = useState(false);
+  const [mobileStatsOpen, setMobileStatsOpen] = useState(false);
   const [now, setNow] = useState(() => Math.floor(Date.now() / 1000));
   const [loadingPhase, setLoadingPhase] = useState<LoadingPhase | null>(null);
   const [notice, setNotice] = useState<{ tone: NoticeTone; message: string } | null>(null);
   const actionLockRef = useRef<'start' | 'submit' | 'refund' | null>(null);
+  const moveChoicesRef = useRef<HTMLDivElement | null>(null);
   const [playerStats, setPlayerStats] = useState({
     wins: 0,
     losses: 0,
@@ -381,6 +384,17 @@ export default function Home() {
       // ignore
     }
   }, [address, mounted, playerStats]);
+
+  useEffect(() => {
+    if (!mobileStatsOpen) return;
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileStatsOpen(false);
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [mobileStatsOpen]);
 
   const { data: activeRoundEncoded, refetch: refetchActiveRound } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
@@ -541,6 +555,9 @@ export default function Home() {
   const hasResolvedRound = !!round && round.state !== 1;
   const winnerIsPlayer = !!round && !!address && round.winner.toLowerCase() === address.toLowerCase();
   const winnerKnown = !!round && round.winner !== '0x0000000000000000000000000000000000000000';
+  const botWinnerExplorerUrl = winnerKnown && !winnerIsPlayer && round
+    ? `${neox.blockExplorers.default.url}/address/${round.winner}`
+    : null;
   const houseMoveKey = getMoveKey(round?.houseMove ?? Move.None);
   const submittedMove = round?.submittedMove && round.submittedMove !== Move.None ? round.submittedMove : selectedMove;
   const submittedMoveKey = getMoveKey(submittedMove);
@@ -932,6 +949,8 @@ export default function Home() {
       setActiveAction('submit');
       setNotice(null);
       setMovePreviewOpen(false);
+      const moveToSubmit = getMoveFromVisibleCard() ?? selectedMove;
+      if (moveToSubmit !== selectedMove) setSelectedMove(moveToSubmit);
       if (mode === 'protected') {
         setRegularTxHash(null);
         const txHash = await sendEnvelopeContractCall(
@@ -939,7 +958,7 @@ export default function Home() {
           CONTRACT_ADDRESS as `0x${string}`,
           CONTRACT_ABI as unknown as any[],
           'playRound',
-          [BigInt(viewedRoundId), selectedMove]
+          [BigInt(viewedRoundId), moveToSubmit]
           ,BigInt(0),
           setProtectedLoadingPhase
         );
@@ -953,7 +972,7 @@ export default function Home() {
           address: CONTRACT_ADDRESS as `0x${string}`,
           abi: CONTRACT_ABI,
           functionName: 'playRound',
-          args: [BigInt(viewedRoundId), selectedMove],
+          args: [BigInt(viewedRoundId), moveToSubmit],
         });
         setRegularTxHash(txHash as `0x${string}`);
         setLoadingPhase('confirm-move');
@@ -1055,6 +1074,54 @@ export default function Home() {
     setSelectedMove(MoveOrder[nextIndex]);
   };
 
+  const getMoveFromVisibleCard = () => {
+    const choices = moveChoicesRef.current;
+    if (!choices) return null;
+    if (choices.scrollWidth <= choices.clientWidth + 1) return null;
+
+    const cards = Array.from(choices.querySelectorAll<HTMLButtonElement>('.move-card'));
+    if (!cards.length) return null;
+
+    const currentScroll = choices.scrollLeft;
+    let nearestIndex = 0;
+    let nearestDistance = Number.POSITIVE_INFINITY;
+
+    cards.forEach((card, index) => {
+      const distance = Math.abs(card.offsetLeft - currentScroll);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearestIndex = index;
+      }
+    });
+
+    return MoveOrder[nearestIndex] ?? null;
+  };
+
+  const syncSelectedMoveFromScroll = () => {
+    const moveFromView = getMoveFromVisibleCard();
+    if (moveFromView !== null && moveFromView !== selectedMove) {
+      setSelectedMove(moveFromView);
+    }
+  };
+
+  useEffect(() => {
+    const choices = moveChoicesRef.current;
+    if (!choices) return;
+    if (choices.scrollWidth <= choices.clientWidth + 1) return;
+
+    const nextIndex = MoveOrder.indexOf(selectedMove as (typeof MoveOrder)[number]);
+    if (nextIndex < 0) return;
+
+    const cards = Array.from(choices.querySelectorAll<HTMLButtonElement>('.move-card'));
+    const targetCard = cards[nextIndex];
+    if (!targetCard) return;
+
+    const targetLeft = targetCard.offsetLeft;
+    if (Math.abs(choices.scrollLeft - targetLeft) <= 2) return;
+
+    choices.scrollTo({ left: targetLeft, behavior: 'smooth' });
+  }, [selectedMove]);
+
   const handleWalletConnect = async (label: string, connector: (typeof walletButtons)[number]['connector'], available: boolean, unavailableMessage: string) => {
     if (!available || !connector) {
       showNotice(unavailableMessage, 'info');
@@ -1087,7 +1154,6 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="/img/styles.css" />
       </Head>
 
       <main className="frame">
@@ -1109,6 +1175,64 @@ export default function Home() {
             >
               Status: {liquidityStatusText}
             </span>
+          </div>
+
+          <button
+            className="app-stats-toggle"
+            type="button"
+            aria-label="Open player stats"
+            aria-haspopup="dialog"
+            aria-expanded={mobileStatsOpen}
+            aria-controls="mobile-stats-dialog"
+            onClick={() => setMobileStatsOpen(true)}
+          >
+            <span className="app-stats-toggle__icon" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+
+          <div
+            className={cx('mobile-stats-dialog', mobileStatsOpen && 'mobile-stats-dialog--open')}
+            id="mobile-stats-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Player stats"
+            aria-hidden={!mobileStatsOpen}
+            onClick={(event) => {
+              if (event.target === event.currentTarget) setMobileStatsOpen(false);
+            }}
+          >
+            <div className="mobile-stats-dialog__panel">
+              <button className="mobile-stats-dialog__close" type="button" aria-label="Close player stats" onClick={() => setMobileStatsOpen(false)}>
+                <img src="/img/X.svg" alt="" />
+              </button>
+              <p className="mobile-stats-dialog__title">Player Stats</p>
+              <p className="mobile-stats-dialog__row"><span>Wins</span><strong>{playerStats.wins}</strong></p>
+              <p className="mobile-stats-dialog__row"><span>Losses</span><strong>{playerStats.losses}</strong></p>
+              <p className="mobile-stats-dialog__row"><span>Draws</span><strong>{playerStats.draws}</strong></p>
+              <p className="mobile-stats-dialog__row"><span>Balance</span><strong>{displayedStatsBalance} GAS</strong></p>
+              <p className="mobile-stats-dialog__row"><span>Pool</span><strong>{displayedContractPool} GAS</strong></p>
+              <p className={cx('mobile-stats-dialog__row', !hasEnoughPoolForStake && 'mobile-stats-dialog__row--warning')}>
+                <span>Status</span>
+                <strong>{liquidityStatusText}</strong>
+              </p>
+              <p className="mobile-stats-dialog__row">
+                <span>Wallet</span>
+                <strong>{walletText}</strong>
+              </p>
+              <button
+                className="mobile-stats-dialog__logout"
+                type="button"
+                onClick={() => {
+                  setMobileStatsOpen(false);
+                  disconnect();
+                }}
+              >
+                Log out
+              </button>
+            </div>
           </div>
 
           <div className="app-bar" aria-label="Application name">
@@ -1337,7 +1461,7 @@ export default function Home() {
                     </button>
 
                     <div className="move-screen__picker-window">
-                      <div className="move-screen__choices">
+                      <div className="move-screen__choices" ref={moveChoicesRef} onScroll={syncSelectedMoveFromScroll}>
                         {MoveOrder.map((moveValue) => {
                           const moveKey = getMoveKey(moveValue)!;
                           return (
@@ -1444,6 +1568,16 @@ export default function Home() {
                 <img className="battle-screen__result-icon" id="battle-result-icon" src={battleResultIcon} alt="" />
                 <p className="battle-screen__result-title" id="battle-result-title">{battleResultTitle}</p>
                 <p className="battle-screen__result-copy" id="battle-result-copy">{summary.resultCopy}</p>
+                {botWinnerExplorerUrl ? (
+                  <a
+                    className="battle-screen__result-link"
+                    href={botWinnerExplorerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View winner wallet on Explorer
+                  </a>
+                ) : null}
               </div>
 
               <div className="battle-summary" id="battle-summary" aria-hidden={heroState !== 'battle'} data-outcome={battleOutcome}>

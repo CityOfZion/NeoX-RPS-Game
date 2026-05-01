@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import '../public/img/styles.css';
 import Providers from '../providers/WagmiProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
