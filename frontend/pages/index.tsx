@@ -949,8 +949,7 @@ export default function Home() {
       setActiveAction('submit');
       setNotice(null);
       setMovePreviewOpen(false);
-      const moveToSubmit = getMoveFromVisibleCard() ?? selectedMove;
-      if (moveToSubmit !== selectedMove) setSelectedMove(moveToSubmit);
+      const moveToSubmit = selectedMove;
       if (mode === 'protected') {
         setRegularTxHash(null);
         const txHash = await sendEnvelopeContractCall(
@@ -1082,12 +1081,13 @@ export default function Home() {
     const cards = Array.from(choices.querySelectorAll<HTMLButtonElement>('.move-card'));
     if (!cards.length) return null;
 
-    const currentScroll = choices.scrollLeft;
+    const viewportCenter = choices.scrollLeft + choices.clientWidth / 2;
     let nearestIndex = 0;
     let nearestDistance = Number.POSITIVE_INFINITY;
 
     cards.forEach((card, index) => {
-      const distance = Math.abs(card.offsetLeft - currentScroll);
+      const cardCenter = card.offsetLeft + card.clientWidth / 2;
+      const distance = Math.abs(cardCenter - viewportCenter);
       if (distance < nearestDistance) {
         nearestDistance = distance;
         nearestIndex = index;
