@@ -275,6 +275,8 @@ export default function Home() {
   const [notice, setNotice] = useState<{ tone: NoticeTone; message: string } | null>(null);
   const actionLockRef = useRef<'start' | 'submit' | 'refund' | null>(null);
   const moveChoicesRef = useRef<HTMLDivElement | null>(null);
+  const moveAutoScrollRef = useRef(false);
+  const moveAutoScrollTimerRef = useRef<number | null>(null);
   const [playerStats, setPlayerStats] = useState({
     wins: 0,
     losses: 0,
@@ -555,11 +557,15 @@ export default function Home() {
   const hasResolvedRound = !!round && round.state !== 1;
   const winnerIsPlayer = !!round && !!address && round.winner.toLowerCase() === address.toLowerCase();
   const winnerKnown = !!round && round.winner !== '0x0000000000000000000000000000000000000000';
+  const isFrontRunLoss = mode === 'standard' && winnerKnown && !winnerIsPlayer;
   const botWinnerExplorerUrl = winnerKnown && !winnerIsPlayer && round
     ? `${neox.blockExplorers.default.url}/address/${round.winner}`
     : null;
   const houseMoveKey = getMoveKey(round?.houseMove ?? Move.None);
+  const houseMoveName = MoveNames[round?.houseMove ?? Move.None];
   const submittedMove = round?.submittedMove && round.submittedMove !== Move.None ? round.submittedMove : selectedMove;
+  const submittedMoveName = MoveNames[submittedMove];
+  const selectedMoveName = MoveNames[selectedMove];
   const submittedMoveKey = getMoveKey(submittedMove);
   const currentIndex = Math.max(0, MoveOrder.indexOf(selectedMove as (typeof MoveOrder)[number]));
 
@@ -591,8 +597,10 @@ export default function Home() {
       ? 'Draw'
       : winnerIsPlayer
         ? 'You Win'
-        : winnerKnown
-          ? 'Bot Wins'
+        : isFrontRunLoss
+          ? 'Front-run by MEV Bot'
+          : winnerKnown
+            ? 'You Lose'
           : 'You Lose';
 
   const battleResultIcon = round?.state === 3 ? '/img/draw.svg' : winnerIsPlayer ? '/img/win.svg' : '/img/lose.svg';
@@ -637,7 +645,7 @@ export default function Home() {
         resultCopy: 'No bot. No front-run. A genuine win.',
         leftTitle: 'This is encrypted transaction ordering.',
         leftCopy:
-          'Your move was sealed before it was submitted. The opponent’s was sealed too. Both were revealed only after confirmation, so no validator or bot could peek or reorder.',
+          'Your move was sealed before it was submitted. The house move was sealed too. Both were revealed only after confirmation, so no validator or bot could peek or reorder.',
         rightTitle: 'In the real world:',
         rightCopy:
           'NeoX uses encrypted ordering so transaction contents stay hidden during ordering. By the time anyone can inspect them, it is already final.',
@@ -660,7 +668,7 @@ export default function Home() {
           resultCopy: 'No bot. No front-run. A genuine win.',
           leftTitle: 'This is encrypted transaction ordering.',
           leftCopy:
-            'Your move was sealed before it was submitted. The opponent’s was sealed too. Both were revealed only after confirmation, so no validator or bot could peek or reorder.',
+            'Your move was sealed before it was submitted. The house move was sealed too. Both were revealed only after confirmation, so no validator or bot could peek or reorder.',
           rightTitle: 'In the real world:',
           rightCopy:
             'NeoX uses encrypted ordering so transaction contents stay hidden during ordering. By the time anyone can inspect them, it is already final.',
@@ -711,7 +719,7 @@ export default function Home() {
     };
   }, [mode, round, winnerIsPlayer, winnerKnown]);
 
-  const movePreviewTitle = mode === 'standard' ? 'Opponent’s move' : 'Opponent’s move encrypted';
+  const movePreviewTitle = mode === 'standard' ? 'House move' : 'House move encrypted';
   const movePreviewPill = mode === 'standard' && houseMoveKey ? MoveNames[round?.houseMove ?? Move.None] : 'Hidden';
   const movePreviewAsset = mode === 'standard' && houseMoveKey ? `/img/Hands/Blue/${houseMoveKey}.png` : '/img/Lock.png';
   const movePreviewAssetClass = mode === 'standard' && houseMoveKey ? `move-preview__asset move-preview__asset--spotted-${houseMoveKey}` : 'move-preview__asset';
@@ -1098,11 +1106,19 @@ export default function Home() {
   };
 
   const syncSelectedMoveFromScroll = () => {
+    if (moveAutoScrollRef.current) return;
     const moveFromView = getMoveFromVisibleCard();
     if (moveFromView !== null && moveFromView !== selectedMove) {
       setSelectedMove(moveFromView);
     }
   };
+
+  useEffect(() => () => {
+    if (moveAutoScrollTimerRef.current !== null) {
+      window.clearTimeout(moveAutoScrollTimerRef.current);
+      moveAutoScrollTimerRef.current = null;
+    }
+  }, []);
 
   useEffect(() => {
     const choices = moveChoicesRef.current;
@@ -1119,7 +1135,16 @@ export default function Home() {
     const targetLeft = targetCard.offsetLeft;
     if (Math.abs(choices.scrollLeft - targetLeft) <= 2) return;
 
+    moveAutoScrollRef.current = true;
+    if (moveAutoScrollTimerRef.current !== null) {
+      window.clearTimeout(moveAutoScrollTimerRef.current);
+      moveAutoScrollTimerRef.current = null;
+    }
     choices.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    moveAutoScrollTimerRef.current = window.setTimeout(() => {
+      moveAutoScrollRef.current = false;
+      moveAutoScrollTimerRef.current = null;
+    }, 260);
   }, [selectedMove]);
 
   const handleWalletConnect = async (label: string, connector: (typeof walletButtons)[number]['connector'], available: boolean, unavailableMessage: string) => {
@@ -1447,8 +1472,8 @@ export default function Home() {
             <div className="move-screen__inner">
               <p className="move-screen__intro">
                 {mode === 'protected'
-                  ? 'Choose your move. Be aware that your\n              opponent move is encrypted.'
-                  : 'Choose your move. Your opponent move is visible\n              before you submit.'}
+                  ? 'Choose your move. The house move is encrypted until settlement.'
+                  : 'Choose your move. The house move is visible before you submit, and your move is visible too before confirmation.'}
               </p>
 
               <div className="move-screen__board">
@@ -1490,9 +1515,9 @@ export default function Home() {
                   <img className="move-screen__versus-mark" src="/img/VS.svg" alt="" />
                 </div>
 
-                <section className={cx('move-screen__opponent', mode === 'standard' ? 'move-screen__opponent--spotted' : 'move-screen__opponent--encrypted')} aria-label="Opponent move encrypted" title="Opponent move is encrypted">
+                <section className={cx('move-screen__opponent', mode === 'standard' ? 'move-screen__opponent--spotted' : 'move-screen__opponent--encrypted')} aria-label="House move" title="House move status">
                   <h2 className="move-screen__heading" id="move-opponent-heading">
-                    {mode === 'standard' ? 'Opponent’s move revealed' : 'Opponent’s move encrypted'}
+                    {mode === 'standard' ? 'House move revealed' : 'House move encrypted'}
                   </h2>
                   <div className="move-screen__opponent-box">
                     <div className="move-screen__lock-wrap">
@@ -1505,7 +1530,7 @@ export default function Home() {
                     <span className="move-screen__hidden-pill" id="move-opponent-pill">{mode === 'standard' && houseMoveKey ? MoveNames[round?.houseMove ?? Move.None] : 'Hidden'}</span>
                   </div>
                   <button className="move-screen__view-opponent" id="move-view-opponent" type="button" onClick={() => setMovePreviewOpen(true)}>
-                    View opponent&apos;s move
+                    View house move
                   </button>
                 </section>
               </div>
@@ -1540,12 +1565,24 @@ export default function Home() {
             </button>
           </div>
 
-          <div className={cx('battle-screen', hasResolvedRound && 'battle-screen--resolved', hasResolvedRound && 'battle-screen--summary-visible')} id="battle-screen" aria-hidden={heroState !== 'battle'}>
+          <div
+            className={cx(
+              'battle-screen',
+              hasResolvedRound && 'battle-screen--resolved',
+              hasResolvedRound && 'battle-screen--summary-visible',
+              isFrontRunLoss && 'battle-screen--front-run'
+            )}
+            id="battle-screen"
+            aria-hidden={heroState !== 'battle'}
+          >
             <div className="battle-screen__inner">
               <p className="battle-screen__intro" aria-hidden="true" />
 
               <div className="battle-screen__arena">
-                <section className="battle-screen__fighter battle-screen__fighter--player" aria-label="Your move">
+                <section
+                  className={cx('battle-screen__fighter battle-screen__fighter--player', isFrontRunLoss && 'battle-screen__fighter--intercepted')}
+                  aria-label={isFrontRunLoss ? 'MEV bot move' : 'Your move'}
+                >
                   <div className="battle-screen__animation" id="battle-player-animation">
                     <BattleAnimation assetPath={submittedMoveKey ? `/img/left-${submittedMoveKey}.json` : null} label={MoveNames[submittedMove]} />
                   </div>
@@ -1556,7 +1593,7 @@ export default function Home() {
                   <img className="battle-screen__versus-mark" src="/img/VS.svg" alt="" />
                 </div>
 
-                <section className="battle-screen__fighter battle-screen__fighter--opponent" aria-label="Opponent move">
+                <section className="battle-screen__fighter battle-screen__fighter--opponent" aria-label="House move">
                   <div className="battle-screen__animation" id="battle-opponent-animation">
                     <BattleAnimation assetPath={houseMoveKey ? `/img/right-${houseMoveKey}-opponent.json` : null} label={MoveNames[round?.houseMove ?? Move.None]} />
                   </div>
@@ -1568,6 +1605,26 @@ export default function Home() {
                 <img className="battle-screen__result-icon" id="battle-result-icon" src={battleResultIcon} alt="" />
                 <p className="battle-screen__result-title" id="battle-result-title">{battleResultTitle}</p>
                 <p className="battle-screen__result-copy" id="battle-result-copy">{summary.resultCopy}</p>
+                {isFrontRunLoss ? (
+                  <div className="battle-screen__actors" aria-label="Round sequence">
+                    <p className="battle-screen__actor-row">
+                      <span className="battle-screen__actor-label">House played</span>
+                      <span className="battle-screen__actor-value">{houseMoveName}</span>
+                    </p>
+                    <p className="battle-screen__actor-row">
+                      <span className="battle-screen__actor-label">You submitted</span>
+                      <span className="battle-screen__actor-value">{selectedMoveName}</span>
+                    </p>
+                    <p className="battle-screen__actor-row battle-screen__actor-row--bot">
+                      <span className="battle-screen__actor-label">MEV Bot submitted</span>
+                      <span className="battle-screen__actor-value">
+                        {submittedMoveName}
+                        <span className="battle-screen__bot-pill">landed first</span>
+                      </span>
+                    </p>
+                    <p className="battle-screen__actors-note">Same move you picked. Higher gas. Beat you to the block.</p>
+                  </div>
+                ) : null}
                 {botWinnerExplorerUrl ? (
                   <a
                     className="battle-screen__result-link"

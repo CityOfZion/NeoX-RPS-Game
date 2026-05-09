@@ -1110,6 +1110,10 @@ body {
   transform-origin: left bottom;
 }
 
+.battle-screen__fighter--intercepted .battle-screen__animation > svg {
+  filter: hue-rotate(-42deg) saturate(1.48) brightness(1.04) drop-shadow(0 0 14px rgba(255, 88, 32, 0.38));
+}
+
 .battle-screen__fighter--opponent .battle-screen__animation {
   width: var(--battle-right-size);
   height: var(--battle-right-size);
@@ -1168,6 +1172,41 @@ body {
   transition: opacity 240ms ease, transform 240ms ease;
 }
 
+.battle-screen--front-run .battle-screen__result {
+  width: min(660px, calc(100vw - 56px));
+  padding: 18px 20px 16px;
+  border-radius: 26px;
+  border: 1px solid rgba(122, 221, 147, 0.24);
+  background: rgba(0, 69, 50, 0.54);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+}
+
+.battle-screen--front-run .battle-screen__actors {
+  max-width: 100%;
+  margin-top: 2px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.battle-screen--front-run .battle-screen__actor-row {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(150, 242, 130, 0.2);
+}
+
+.battle-screen--front-run .battle-screen__actor-row:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.battle-screen--front-run .battle-screen__actors-note {
+  margin-top: 8px;
+}
+
 .battle-screen__result-icon {
   width: 34px;
   height: 34px;
@@ -1199,10 +1238,76 @@ body {
   line-height: 1.25;
 }
 
+.battle-screen__actors {
+  width: 100%;
+  max-width: min(520px, calc(100vw - 64px));
+  margin: 0;
+  padding: 14px 16px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(75, 161, 94, 0.55);
+  background: rgba(0, 81, 57, 0.52);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.battle-screen__actor-row {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.battle-screen__actor-label {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.battle-screen__actor-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.battle-screen__actor-row--bot .battle-screen__actor-label,
+.battle-screen__actor-row--bot .battle-screen__actor-value {
+  color: #ffa363;
+}
+
+.battle-screen__bot-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 140, 76, 0.66);
+  background: rgba(255, 99, 58, 0.18);
+  color: #ffd3b6;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.battle-screen__actors-note {
+  margin: 2px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Asap", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .battle-screen__result-link {
   display: inline-block;
   margin-top: 2px;
-  margin-bottom: 22px;
+  margin-bottom: 0;
   color: #96f282;
   font-size: 14px;
   font-weight: 700;
@@ -1238,6 +1343,10 @@ body {
 
 .battle-screen__result--visible .battle-screen__result-copy {
   animation: battle-result-item-in 320ms ease-out 250ms forwards;
+}
+
+.battle-screen__result--visible .battle-screen__actors {
+  animation: battle-result-item-in 320ms ease-out 340ms forwards;
 }
 
 .battle-screen__actions {
@@ -1296,6 +1405,14 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 320ms ease, transform 320ms ease;
+}
+
+.battle-screen--front-run .battle-summary {
+  top: 438px;
+}
+
+.battle-screen--front-run .battle-summary__actions {
+  margin-top: 24px;
 }
 
 .battle-summary__heading,
@@ -1496,6 +1613,11 @@ body {
 
 .hero[data-wallet-state="battle"] .battle-screen--summary-visible .battle-screen__fighter {
   opacity: 0.28;
+}
+
+.hero[data-wallet-state="battle"] .battle-screen--front-run.battle-screen--summary-visible .battle-screen__fighter {
+  opacity: 0.16;
+  filter: blur(1.4px);
 }
 
 .hero[data-wallet-state="battle"] .battle-screen--summary-visible .battle-summary__actions {
@@ -3054,6 +3176,16 @@ body {
     width: min(340px, calc(100vw - 48px));
   }
 
+  .battle-screen--front-run .battle-screen__result {
+    width: min(390px, calc(100vw - 40px));
+    padding: 14px 14px 12px;
+    border-radius: 20px;
+  }
+
+  .battle-screen--front-run .battle-screen__actor-row {
+    padding: 6px 0;
+  }
+
   .battle-screen__result-title {
     font-size: 28px;
   }
@@ -3061,6 +3193,30 @@ body {
   .battle-screen__result-copy {
     font-size: 18px;
     white-space: normal;
+  }
+
+  .battle-screen__actors {
+    max-width: min(360px, calc(100vw - 56px));
+    padding: 12px 14px 14px;
+    border-radius: 16px;
+  }
+
+  .battle-screen__actor-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .battle-screen__actor-value {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .battle-screen__actors-note {
+    font-size: 13px;
+    text-align: left;
   }
 
   .battle-summary {
@@ -3073,6 +3229,40 @@ body {
     margin-inline: auto;
     padding: 18px 0 0;
     transform: none;
+  }
+
+  .battle-screen--front-run .battle-summary {
+    margin-top: -170px;
+  }
+
+  .battle-screen--front-run .battle-screen__arena {
+    min-height: 0;
+    padding-top: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .battle-screen--front-run .battle-screen__fighter {
+    display: none;
+  }
+
+  .battle-screen--front-run .battle-screen__result {
+    position: relative;
+    top: 0;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    width: min(390px, calc(100vw - 40px));
+  }
+
+  .battle-screen--front-run .battle-screen__result--visible {
+    transform: none;
+  }
+
+  .battle-screen--front-run .battle-summary {
+    top: auto;
+    margin-top: 12px;
   }
 
   .hero[data-wallet-state="battle"] .battle-screen--summary-visible .battle-summary {
@@ -3217,6 +3407,21 @@ body {
 
   .battle-screen__arena {
     min-height: 50vh;
+  }
+
+  .battle-screen--front-run .battle-screen__arena {
+    min-height: 0;
+    padding-top: 124px;
+  }
+
+  .battle-screen--front-run .battle-screen__result {
+    width: calc(100vw - 48px);
+  }
+
+  .battle-screen--front-run .battle-summary {
+    top: auto;
+    margin-top: 10px;
+    padding-top: 0;
   }
 
   .battle-summary {
