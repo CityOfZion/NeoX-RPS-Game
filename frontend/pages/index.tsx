@@ -558,6 +558,7 @@ export default function Home() {
   const winnerIsPlayer = !!round && !!address && round.winner.toLowerCase() === address.toLowerCase();
   const winnerKnown = !!round && round.winner !== '0x0000000000000000000000000000000000000000';
   const isFrontRunLoss = mode === 'standard' && winnerKnown && !winnerIsPlayer;
+  const useDialogResult = isFrontRunLoss || mode === 'protected';
   const botWinnerExplorerUrl = winnerKnown && !winnerIsPlayer && round
     ? `${neox.blockExplorers.default.url}/address/${round.winner}`
     : null;
@@ -567,6 +568,14 @@ export default function Home() {
   const submittedMoveName = MoveNames[submittedMove];
   const selectedMoveName = MoveNames[selectedMove];
   const submittedMoveKey = getMoveKey(submittedMove);
+  const dialogThirdLabel = isFrontRunLoss ? 'MEV Bot Submitted' : 'Round result';
+  const dialogThirdValue = isFrontRunLoss
+    ? submittedMoveName
+    : round?.state === 3
+      ? 'Draw'
+      : winnerIsPlayer
+        ? 'You Win'
+        : 'House Wins';
   const currentIndex = Math.max(0, MoveOrder.indexOf(selectedMove as (typeof MoveOrder)[number]));
 
   const heroState: HeroState = !isConnected
@@ -1262,16 +1271,7 @@ export default function Home() {
 
           <div className="app-bar" aria-label="Application name">
             <div className="app-bar__brand app-bar__logo" aria-label="Rock, Paper, Scissors">
-              <img className="app-bar__letters" src="/img/letters.svg" alt="" />
-              <div className="app-bar__hand-shell app-bar__hand-shell--rock">
-                <img className="app-bar__hand" src="/img/rock.png" alt="" />
-              </div>
-              <div className="app-bar__hand-shell app-bar__hand-shell--paper">
-                <img className="app-bar__hand" src="/img/paper.png" alt="" />
-              </div>
-              <div className="app-bar__hand-shell app-bar__hand-shell--scissors">
-                <img className="app-bar__hand" src="/img/scissors.png" alt="" />
-              </div>
+              <img className="app-bar__logo-image" src="/img/rps-logo-navbar.svg" alt="" />
             </div>
           </div>
 
@@ -1570,7 +1570,7 @@ export default function Home() {
               'battle-screen',
               hasResolvedRound && 'battle-screen--resolved',
               hasResolvedRound && 'battle-screen--summary-visible',
-              isFrontRunLoss && 'battle-screen--front-run'
+              useDialogResult && 'battle-screen--front-run'
             )}
             id="battle-screen"
             aria-hidden={heroState !== 'battle'}
@@ -1602,30 +1602,58 @@ export default function Home() {
               </div>
 
               <div className="battle-screen__result battle-screen__result--visible" id="battle-result" data-outcome={battleOutcome} aria-live="polite">
-                <img className="battle-screen__result-icon" id="battle-result-icon" src={battleResultIcon} alt="" />
-                <p className="battle-screen__result-title" id="battle-result-title">{battleResultTitle}</p>
-                <p className="battle-screen__result-copy" id="battle-result-copy">{summary.resultCopy}</p>
-                {isFrontRunLoss ? (
-                  <div className="battle-screen__actors" aria-label="Round sequence">
-                    <p className="battle-screen__actor-row">
-                      <span className="battle-screen__actor-label">House played</span>
-                      <span className="battle-screen__actor-value">{houseMoveName}</span>
-                    </p>
-                    <p className="battle-screen__actor-row">
-                      <span className="battle-screen__actor-label">You submitted</span>
-                      <span className="battle-screen__actor-value">{selectedMoveName}</span>
-                    </p>
-                    <p className="battle-screen__actor-row battle-screen__actor-row--bot">
-                      <span className="battle-screen__actor-label">MEV Bot submitted</span>
-                      <span className="battle-screen__actor-value">
-                        {submittedMoveName}
-                        <span className="battle-screen__bot-pill">landed first</span>
-                      </span>
-                    </p>
-                    <p className="battle-screen__actors-note">Same move you picked. Higher gas. Beat you to the block.</p>
-                  </div>
-                ) : null}
-                {botWinnerExplorerUrl ? (
+                {useDialogResult ? (
+                  <>
+                    <div className="battle-screen__front-run-banner" id="battle-result-title">
+                      <img className="battle-screen__front-run-icon" src={battleResultIcon} alt="" />
+                      <p className="battle-screen__front-run-copy" id="battle-result-copy">
+                        <span className={isFrontRunLoss ? 'battle-screen__front-run-title' : ''}>{battleResultTitle}.</span>{' '}
+                        <span>{summary.resultCopy}</span>
+                      </p>
+                    </div>
+                    <div className="battle-screen__actors" aria-label="Round sequence">
+                      <p className="battle-screen__actor-row">
+                        <span className="battle-screen__actor-label">House played</span>
+                        <span className="battle-screen__actor-value">{houseMoveName}</span>
+                      </p>
+                      <p className="battle-screen__actor-row">
+                        <span className="battle-screen__actor-label">You submitted</span>
+                        <span className="battle-screen__actor-value">{selectedMoveName}</span>
+                      </p>
+                      <p className={cx('battle-screen__actor-row', isFrontRunLoss && 'battle-screen__actor-row--bot')}>
+                        <span className="battle-screen__actor-label">{dialogThirdLabel}</span>
+                        <span className="battle-screen__actor-value">
+                          {dialogThirdValue}
+                          {isFrontRunLoss ? <span className="battle-screen__bot-pill">Landed First</span> : null}
+                        </span>
+                      </p>
+                      {isFrontRunLoss || botWinnerExplorerUrl ? (
+                        <div className="battle-screen__actors-footer">
+                          <p className="battle-screen__actors-note">
+                            {isFrontRunLoss ? 'Same move you picked. Higher GAS. Beat you to the block.' : summary.resultCopy}
+                          </p>
+                          {botWinnerExplorerUrl ? (
+                            <a
+                              className="battle-screen__result-link"
+                              href={botWinnerExplorerUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View winner wallet on Explorer
+                            </a>
+                          ) : null}
+                        </div>
+                      ) : null}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <img className="battle-screen__result-icon" id="battle-result-icon" src={battleResultIcon} alt="" />
+                    <p className="battle-screen__result-title" id="battle-result-title">{battleResultTitle}</p>
+                    <p className="battle-screen__result-copy" id="battle-result-copy">{summary.resultCopy}</p>
+                  </>
+                )}
+                {!useDialogResult && botWinnerExplorerUrl ? (
                   <a
                     className="battle-screen__result-link"
                     href={botWinnerExplorerUrl}

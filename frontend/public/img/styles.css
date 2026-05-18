@@ -3297,9 +3297,23 @@ body {
     font-size: 15px;
   }
 
+  .battle-screen--front-run .battle-screen__actor-row {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: left;
+  }
+
   .battle-screen__actor-value {
     gap: 6px;
     flex-wrap: wrap;
+  }
+
+  .battle-screen--front-run .battle-screen__actor-value {
+    justify-content: flex-end;
+    text-align: right;
+    flex-wrap: nowrap;
   }
 
   .battle-screen__actors-note {
