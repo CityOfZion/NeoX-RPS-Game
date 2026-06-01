@@ -984,6 +984,42 @@ body {
   line-height: 1;
 }
 
+@media (min-width: 1025px) and (max-height: 900px) {
+  .arena-screen {
+    overflow-y: auto;
+    padding-inline: 24px;
+    padding-bottom: 116px;
+  }
+
+  .arena-screen__inner {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .arena-screen__intro {
+    margin-top: 110px;
+  }
+
+  .arena-screen__grid {
+    margin-top: 48px;
+    padding-inline: 0;
+  }
+
+  .arena-card {
+    min-height: 340px;
+    padding: 34px 30px 36px;
+  }
+
+  .arena-card__title {
+    margin: 28px 0 16px;
+  }
+
+  .arena-card__meta {
+    margin: 0 0 32px;
+  }
+}
+
 .stake-screen {
   position: absolute;
   inset: 0;

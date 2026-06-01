@@ -19,6 +19,7 @@ import { neox } from '../config/wagmi';
 import { EnvelopeStatus, sendEnvelopeContractCall } from '../lib/envelope';
 
 const NEOX_CHAIN_ID = 47763;
+const MAX_BET_GAS = 0.5;
 
 const Move = {
   None: 0,
@@ -537,7 +538,7 @@ export default function Home() {
   const sliderMax = Math.max(
     0.1,
     Math.min(
-      100,
+      MAX_BET_GAS,
       Number.isFinite(numericBalance) ? numericBalance : 0.1,
       Number.isFinite(maxStakeByPool) ? maxStakeByPool : 0.1
     )
