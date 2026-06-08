@@ -1,62 +1,59 @@
 # Rock Paper Scissors
 
-This repo now demonstrates a simpler anti-MEV flow than the earlier commit/reveal RPS version.
+This repository is a Rock Paper Scissors demo built to show one core idea:
 
-The contract creates a player-specific round with a public house move:
+- the same game action is vulnerable when sent through the public mempool
+- the same game action is protected when sent through Neo X protected transactions
 
-- the player can send the winning response through the normal public mempool
-- or send the exact same contract call through Neo X's protected transaction path
+## Game objective
 
-That gives us a clean comparison:
+For each round, the contract publishes the house move. The player must submit the correct counter move before the deadline:
 
-- `Public mode`: the bot sees `playRound(roundId, move)` in the mempool and can copy it with a higher fee
-- `Protected mode`: the bot cannot decode the move from the protected transport path, so it cannot steal the prize
+- Rock -> play Paper
+- Paper -> play Scissors
+- Scissors -> play Rock
 
-## Why this version is better
+The first valid winning transaction gets the prize.
 
-- no bot callback is required for the round to finish
-- no reveal step is required from the player
-- no stuck-game cancellation flow is needed for normal play
-- public vs protected behavior differs only by transaction path, which is the actual Neo X story
+## How the game works
 
-## Contract flow
+1. Player starts a round by calling `startRound()` with a stake.
+2. Contract creates round state: player, house move, winning move, deadline, and prize.
+3. Player submits `playRound(roundId, move)` using either:
+   - a normal public transaction, or
+   - a protected transaction path
+4. If the move is correct and arrives first, the caller wins.
+5. If the round expires without a winner, `refundExpiredRound(roundId)` returns funds according to contract rules.
 
-1. Player calls `startRound()` with a small stake.
-2. Contract stores:
-   - player
-   - house move
-   - winning move
-   - deadline
-   - prize amount
-3. Player submits the winning move with `playRound(roundId, move)`.
-4. First correct caller wins the round prize.
-5. If nobody wins before the deadline, the player can call `refundExpiredRound(roundId)`.
+## How this showcases anti-MEV
 
-## Bot behavior
+The contract call is identical in both modes. Only the transaction path changes.
 
-The bot only watches pending public `playRound` transactions.
+- Public mode:
+  - `playRound(roundId, move)` appears in mempool calldata.
+  - A bot can read the move and copy the same call with a higher fee.
+  - The bot can win by being included first.
+- Protected mode:
+  - The move is not exposed to public mempool observers before inclusion.
+  - The copy-trading bot cannot decode and replay in time.
+  - The original player keeps the advantage.
 
-When it sees:
+This makes the anti-MEV behavior easy to inspect because game rules stay constant while transaction visibility changes.
 
-```solidity
-playRound(roundId, move)
-```
+## Code walkthrough
 
-it can decode both values from calldata, confirm the move is correct, and replay the same transaction with a higher fee.
-
-That is enough to steal the round in public mode.
-
-By default, the bot now recycles stolen prize funds back into the contract pool immediately after a successful steal, while keeping a small configurable GAS reserve for future transactions.
-
-## Frontend flow
-
-The UI is built around three actions:
-
-1. `Start Round`
-2. `Play <winning move> Publicly`
-3. `Play <winning move> via Protected Path`
-
-The user sees the public house move and the correct response immediately. The demo is about whether the move can be copied before inclusion, not about solving a puzzle.
+- `contracts/RockPaperScissors.sol`
+  - core round lifecycle: `startRound`, `playRound`, `refundExpiredRound`
+  - validation and payout logic
+- `bot/frontRunner.js`
+  - listens to pending public transactions
+  - decodes `playRound(roundId, move)` calldata
+  - sends a competing replacement/copy transaction
+- `frontend/pages/index.tsx`
+  - UI flow to start a round and submit the winning move
+  - side-by-side actions for public vs protected submission
+- `frontend/lib/envelope.ts`
+  - protected transaction sending path (Neo X envelope flow)
 
 ## Local development
 
@@ -109,10 +106,3 @@ Set these in `.env`:
 - `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`
 - `BOT_RECYCLE_WINNINGS` (optional, default `true`)
 - `BOT_GAS_RESERVE_GAS` (optional, default `0.05`)
-
-## Key files
-
-- `contracts/RockPaperScissors.sol` contains the `BeatTheHouse` contract
-- `bot/frontRunner.js` contains the public mempool copycat bot
-- `frontend/pages/index.tsx` contains the app flow
-- `frontend/lib/envelope.ts` contains the Neo X protected transaction logic
